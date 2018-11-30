@@ -721,7 +721,6 @@ body {
     max-width: 1000px;
     list-style: none;
     text-align: center;
-    height: 150px
 }
 
 .grid figure {
@@ -735,6 +734,10 @@ body {
     width: 48%;
     text-align: center;
     cursor: pointer;
+}
+
+.roadmap .grid{
+  height: 150px
 }
 
 .port-desc {
