@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Style Transfer</title>
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+	<!-- CSS PLUGIN -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.css">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/flexslider.css">
+	<link rel="stylesheet" href="assets/css/aos.css">
+
+	<!-- MAIN STYLE -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- RESPONSIVES STYLE -->
+	<link rel="stylesheet" href="assets/css/style-responsives.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Hind:600|Lato:300,400" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<!-- PRELOADER-->
+	<div id="preloader">
+		<div id="status">
+			<div class="loader-revolve center">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- END PRELOADER -->
+
+	<!-- NAVIGATION -->
+	<div id="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="logo">
+						<a href="index.html">Liam Hinzman</a>
+					</div>
+				</div>
+
+				<div class="col-sm-9">
+					<div class="navigation-menu">
+						<div class="navbar">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END NAVIGATION -->
+
+	<!-- HOME -->
+	<div id="home" class="home-bg box-intro" style="background-image: url('assets/img/portfolio/style_transfer.png')" data-stellar-background-ratio="0.6">
+		<div class="overlay">
+			<div class="container">
+				<div class="row">
+					<div class="home-text">
+
+
+						<div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+							<h1>How I Turned My Cat into a Painting</h1>
+							<h3>
+								<div>Using ConvNets to transfer the artistic style of one image to another</div>
+							</h3>
+						</div>
+					</div>
+
+
+					<a class="smoth-scroll" href="#about">
+						<i class="fa fa-angle-down arrow"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END HOME -->
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="description col-md-6 col-sm-4 col-xs-12">
+          <img src="assets/img/portfolio/mona_transfer.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%; padding-top: 5em"/>
+          <p style="text-align: center">Style transfer can automatically transform photos</p>
+        </div>
+        <div class="description col-md-6 col-sm-4 col-xs-12">
+          <h2>Neural Artistic Style Transfer</h2>
+
+          <p>Using Neural Artistic Style Transfer (Gatys, et al. 2015) I was able to transfer the artistic style of different painting onto my cat.</p>
+          <p>Neural Artistic Style Transfer uses a VGG-19 pretrained on ImageNet. The style of an image is captured by the activations it generates
+          in the VGG-19. Then the content image is iteratively changed to match its style to the style image.</p>
+          <p>I wrote an <a href="https://blog.goodaudience.com/how-i-turned-my-cat-into-a-painting-edf415e4ff5b">article</a> on how style transfer works and my results on Medium.</p>
+          <p>Check out the full code on <a href="https://github.com/LiamHz/NeuralArtisticStyleTransfer">Github</a>,
+            or the interactive notebook on <a href="https://colab.research.google.com/drive/1WeJ8vXf1kvI1FnCg-npAqbgVR4XOc3pq">Google Colab.</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- <br> -->
+	</section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+	<!-- END ABOUT -->
+  <!-- <section id="results" style="padding-bottom: 75px">
+		<div class="container">
+      <div class="row">
+        <div class="description col-md-6 col-sm-4 col-xs-12">
+          <h2>How I used GANs to create original Art</h2>
+
+          <p>Using PyTorch I implemented my own version of GANs that could create original images of new celebrity faces.
+            These faces are new - before my GANs created the image, their faces never existed.</p>
+
+          <p>I had so much fun training my GANs to make faces, I decided to train it to create images of new cat faces.</p>
+          <p>The amazing thing about GANs is that (generally) you don't have to change anything about the GANs to create
+            a different type of image. You only have to give it a new dataset to learn from.</p>
+        </div>
+        <div class="description col-md-6 col-sm-4 col-xs-12">
+          <div style="padding: 1em">
+            <img src="assets/img/gans/celeb_progress.png" style="width: 45%; padding-top: 5em"/>
+            <img src="assets/img/gans/cat_progress.png" style="width: 45%; padding-top: 5em"/>
+          </div>
+          <p style="text-align: center">Images my GANs created</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lessons">
+    <div class="container">
+      <div class="row">
+        <div class="description col-md-6 col-sm-4 col-xs-12">
+          <h2>Mistakes I Learned From</h2>
+
+          <p>At first I trained my GANs to create images of new Pokemon. The results were... not so great. Decent looking blobs of colour though.</p>
+          <p>I learned that the dataset you give the GANs, in this case images of Pokemon - each example in the dataset has to look somewhat similar,
+            otherwise the Generator and Discriminator will be unable to learn any patters.
+            It turns out that Pokemon don't look that similar to each other (lions, tigers, and bears - oh my!).
+          </p>
+          <p>
+            Then I trained my GANs to create images of dogs. The results looked like extremely mutated dogs.
+          </p>
+          <p>It turns out I set the learning rate too high on the Discriminator.
+            It was catching fakes too well, preventing the Generator from learning properly.
+          </p>
+        </div>
+        <div class="description col-md-6 col-sm-4 col-xs-12">
+          <div style="padding: 1em">
+            <img src="assets/img/gans/pokemon_progress.png" style="width: 45%; padding-top: 5em"/>
+            <img src="assets/img/gans/dog_progress.png" style="width: 45%; padding-top: 5em"/>
+          </div>
+          <p style="text-align: center">Mistakes my GANs created</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- FOOTER -->
+	<footer id="footer">
+		<div class="container desktop-only">
+			<div class="col-md-12 text-center">
+				<ul class="social-icons-footer">
+					<li>
+						<a href="https://github.com/liamHz/" target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/liam-hinzman/" target="_blank">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://medium.com/@liamhinzman" target="_blank">
+							<i class="fa fa-medium"></i>
+						</a>
+					</li>
+				</ul>
+				<p>Made by Liam Hinzman</p>
+			</div>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
+
+
+	<!-- JS PLUGIN -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/text-rotate.js"></script>
+	<script src="assets/js/numscroller.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.wow.min.html"></script>
+	<script src="assets/js/jquery.appear.js"></script>
+	<script src="assets/js/masonry/imagesloaded.pkgd.min.html"></script>
+	<script src="assets/js/progress-bar.min.js"></script>
+	<script src="assets/js/jquery.mixitup.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/magnific-popup-options.js"></script>
+	<script src="assets/js/jquery.flexslider-min.js"></script>
+	<script src="assets/js/aos.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/jquery.form.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
