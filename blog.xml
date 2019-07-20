@@ -23,5 +23,15 @@ I spent some time introspecting, here&amp;rsquo;s my answer:
 In five years I want to be the guy you go to if you have an awesome idea and need it built.</description>
     </item>
     
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hi I&amp;rsquo;m Liam, a 17 y/o who&amp;rsquo;s trying to understand the world and myself.
+What I Do - Machnie learning research intern at Layer 6 - Machine learning developer intern at SickKids - Learning full stack web devlopment (MERN stack) - Playing piano - Occasionally I write here</description>
+    </item>
+    
   </channel>
 </rss>
