@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liam Hinzman</title>
-    <link>liamhinzman.com/</link>
+    <link>/</link>
     <description>Recent content on Liam Hinzman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jul 2019 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="liamhinzman.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Who Do I Want to be in Five Years?</title>
-      <link>liamhinzman.com/posts/fiveyears/</link>
+      <link>/posts/fiveyears/</link>
       <pubDate>Sat, 20 Jul 2019 00:00:00 -0400</pubDate>
       
-      <guid>liamhinzman.com/posts/fiveyears/</guid>
+      <guid>/posts/fiveyears/</guid>
       <description>Until today I didn&amp;rsquo;t have an answer.
 I didn&amp;rsquo;t have a clear idea of what I was working towards in life. What did I want to acheive, what kind of person did I want to become? It felt like I was lost, driving without a destination.
 I spent some time introspecting, here&amp;rsquo;s my answer:
