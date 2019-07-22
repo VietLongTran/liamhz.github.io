@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Liam Hinzman</title>
-    <link>https://liamhinzman.com/</link>
-    <description>Recent content on Liam Hinzman</description>
+    <title>tldr-article on Liam Hinzman</title>
+    <link>https://liamhinzman.com/tags/tldr-article/</link>
+    <description>Recent content in tldr-article on Liam Hinzman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Jul 2019 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://liamhinzman.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://liamhinzman.com/tags/tldr-article/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -33,29 +33,6 @@ Live strategically, don&amp;rsquo;t just think strategically. When you decide to
       <description>Link to article
 If you&amp;rsquo;ve been procrastinating for most of the day:
  Accept that you won&amp;rsquo;t do anything today, and don&amp;rsquo;t get angry at yourself Set an alarm for when you&amp;rsquo;ll prep for bed Procrastinate for the rest of the day When the alarm rings pack your laptop and everything else you need for work in your backpack When you wake up leave the house immediately with your backpack Go to a library, caffe, or other place to GSD Return home in the evening  Context intentionality as the difference home and every other place on earth</description>
-    </item>
-    
-    <item>
-      <title>Who Do I Want to be in Five Years?</title>
-      <link>https://liamhinzman.com/posts/fiveyears/</link>
-      <pubDate>Sat, 20 Jul 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://liamhinzman.com/posts/fiveyears/</guid>
-      <description>Until today I didn&amp;rsquo;t have an answer.
-I didn&amp;rsquo;t have a clear idea of what I was working towards in life. What did I want to acheive, what kind of person did I want to become? It felt like I was lost, driving without a destination.
-I spent some time introspecting, here&amp;rsquo;s my answer:
-In five years I want to be the guy you go to if you have an awesome idea and need it built.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://liamhinzman.com/pages/about/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://liamhinzman.com/pages/about/</guid>
-      <description>Hi, I&amp;rsquo;m Liam, a 17 y/o who’s trying to understand the world and myself.
-What I Do
- Machine learning research intern at Layer 6 Machine learning developer intern at SickKids Learning full stack web development (MERN) Playing piano Occasionally I write here  </description>
     </item>
     
   </channel>
