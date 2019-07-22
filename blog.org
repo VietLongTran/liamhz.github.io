@@ -81,7 +81,7 @@ I'm the only thing in life I have full control of. Might as well be awesome.
 :EXPORT_FILE_NAME: intj_advice
 :END:
 
-[[https://www.personalitycafe.com/intj-forum-scientists/99338-advice-young-intjs.html][Link to post]]
+[[https://www.personalitycafe.com/intj-forum-scientists/99338-advice-young-intjs.html][Link to orignal article]]
 
 *Be Strategic*
 
@@ -124,7 +124,7 @@ Reflect on your habits, patterns, and routine. and find ways to improve it.
 :EXPORT_FILE_NAME: guzey_productivity
 :END:
 
-[[https://guezy.com/productivity][Link to article]]
+[[https://guezy.com/productivity][Link to original article]]
 
 *If you've been procrastinating for most of the day:*
 1. Accept that you won't do anything today, and don't get angry at yourself

@@ -8,7 +8,7 @@ noauthor = true
 nocomment = true
 +++
 
-[Link to article](https://guezy.com/productivity)
+[Link to original article](https://guezy.com/productivity)
 
 **If you've been procrastinating for most of the day:**
 

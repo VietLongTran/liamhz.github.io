@@ -5,10 +5,12 @@
 	<div class="container wrapper post">
 		{{ partial "head.html" . }}
 
+		{{ if not (eq .Title "About") }}
     <div class="post-header">
 			<h1 class="title">{{ .Title }}</h1>
 			<div class="meta">Posted at &mdash; {{ dateFormat "Jan 2, 2006" .Date }}</div>
 		</div>
+    {{ end }}
 
 		<div class="markdown">
 			{{ .Content }}
