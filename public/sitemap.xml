@@ -4,37 +4,42 @@
   
   <url>
     <loc>https://liamhinzman.com/</loc>
-    <lastmod>2019-07-22T00:00:00-04:00</lastmod>
+    <lastmod>2019-07-26T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://liamhinzman.com/tldr/younger_self/</loc>
+    <lastmod>2019-07-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://liamhinzman.com/tags/</loc>
+    <lastmod>2019-07-26T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://liamhinzman.com/tldr/</loc>
+    <lastmod>2019-07-26T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://liamhinzman.com/tags/tldr/</loc>
+    <lastmod>2019-07-26T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://liamhinzman.com/tags/tldr-article/</loc>
+    <lastmod>2019-07-26T00:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://liamhinzman.com/tldr/intj_advice/</loc>
     <lastmod>2019-07-22T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://liamhinzman.com/tags/</loc>
-    <lastmod>2019-07-22T00:00:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://liamhinzman.com/tldr/</loc>
-    <lastmod>2019-07-22T00:00:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://liamhinzman.com/tags/tldr/</loc>
-    <lastmod>2019-07-22T00:00:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://liamhinzman.com/tags/tldr-article/</loc>
-    <lastmod>2019-07-22T00:00:00-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -1,7 +1,7 @@
 +++
 title = "TLDR: To My Younger Self"
 author = ["Liam Hinzman"]
-date = 2019-07-21
+date = 2019-07-26
 tags = ["tldr", "tldr-article"]
 draft = false
 noauthor = true
