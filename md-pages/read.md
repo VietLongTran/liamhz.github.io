@@ -8,7 +8,7 @@
 
 ## Papers
 - **[Anthropic Shadow][p1]**: People underestimate the likelihood of extinction risks
-- **[The Doomsday Argument and the # of Possible Observers][p2]**: The anthropic principle implies that humans are a long-lived species
+- **[The Doomsday Argument and the Number of Possible Observers][p2]**: The anthropic principle implies that humans are a long-lived species
 - **[Is the rate of scientific progress slowing down?][p6]**: Scientific progress remains linear despite increased researchers
 
 ## Books
