@@ -75,10 +75,10 @@ nav a {
 
 /* Main content list */
 main li {
-    list-style-type: none;
-    margin-bottom: 1rem;
+    /*list-style-type: none;*/
+    margin-bottom: 0.7rem;
     font-size: 1.1rem;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
 }
 
 main a {
