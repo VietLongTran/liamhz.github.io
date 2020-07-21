@@ -1,6 +1,8 @@
-% Signaling: Why People Have Conversations
-%
-% May 16, 2020
+---
+title: "Signaling: Why People Have Conversations"
+author: "Liam Hinzman"
+date: "May 16, 2020"
+...
 
 # Signaling: Why People Have Conversations
 
@@ -50,3 +52,9 @@ So why did I write this post?
 I'd like to think it was primarily because of my curiosity. Signaling has a lot of explanatory power when analyzing why people do certain things. But it also serves as an (attempted) signal of my intelligence. 
 
 Hey, look at me! I'm the type of person who spends time learning and writing about human behaviour. I hope you think of me as a good potential ally.
+
+---
+
+Feel free to contact me on [Twitter][tprofile]. Feedback and comments are appreciated :)
+
+[tprofile]: https://twitter.com/LiamHinzman
