@@ -100,11 +100,23 @@ nav li {
 }
 
 nav {
+  text-align: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+img.profile {
+  display: block;
+  margin: 1rem auto;
 }
 
 /* Desktop specific */
 @media only screen and (min-width: 768px) {
+  img.profile {
+    display: inline;
+    margin: auto;
+  }
+
   .grid-container {
     display: grid;
     width: 85%;

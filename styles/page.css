@@ -6,6 +6,7 @@ nav li {
 }
 
 nav {
+  text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -125,6 +126,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
+  font-weight: 600;
 }
 
 h2 {
