@@ -1,6 +1,5 @@
 ---
 title: "Newsletter"
-author: "Liam Hinzman"
 ...
 
 # Newsletter

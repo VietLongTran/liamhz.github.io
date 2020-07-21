@@ -1,7 +1,8 @@
 ---
 title: "Fundamentals of the Vulkan Graphics API: Why Rendering a Triangle is Complicated"
 author: "Liam Hinzman"
-date: "July 21, 2020"
+date: "2020-07-21"
+url: "vulkan-fundamentals"
 ...
 
 # Fundamentals of the Vulkan Graphics API: Why Rendering a Triangle is Complicated

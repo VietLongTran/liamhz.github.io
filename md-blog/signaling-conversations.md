@@ -1,7 +1,8 @@
 ---
 title: "Signaling: Why People Have Conversations"
 author: "Liam Hinzman"
-date: "May 16, 2020"
+date: "2020-05-16"
+url: signaling-conversations
 ...
 
 # Signaling: Why People Have Conversations
