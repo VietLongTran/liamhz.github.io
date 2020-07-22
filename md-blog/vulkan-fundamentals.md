@@ -18,7 +18,7 @@ So I wrote this article explaining what the Vulkan graphics API is, how it works
 ## What Vulkan Is
 Vulkan is a graphics API that is designed to provide an accurate abstraction of how modern graphics processing units (GPUs) work. Unlike OpenGL, Vulkan is very verbose. Every detail related to the graphics API needs to be set up from scratch. The upsides to this are that you only use what you choose to, and you can better understand what's going on in your application and in doing so achieve much higher performance.
 
-This article is intended to be a concise overview of the fundamentals of Vulkan. It was written for somebody who knew Vulkan, but has forgotten many of the details (i.e. future me). Most of the information here comes from the [Vulkan 1.2 Spec][001]. 
+This article is intended to be a concise overview of the fundamentals of Vulkan. It was written for somebody who knew Vulkan but has forgotten many of the details (i.e. future me). Most of the information here comes from the [Vulkan 1.2 Spec][001]. 
 
 Note: This article uses the [C++ bindings][002] for Vulkan
 
@@ -38,7 +38,7 @@ _In the beginning there was the Vulkan API. And the API was made flesh through `
 
 You initialize Vulkan by creating an instance, which contains application state - information like what version of the Vulkan API you're using, your application's name, and which extensions and layers you want to enable. Extensions and layers provide behavior that isn't included by default in Vulkan, like extended error checking and call logging.
 
-With an instance you can examine the **physical devices** (usually GPUs) that are available. A machine might have multiple physical devices, and each of their properties / features (such as being a dedicated graphics card) can be inspected.
+With an instance you can examine the **physical devices** (usually GPUs) that are available. A machine might have multiple physical devices, and each of their properties (such as being a dedicated graphics card) can be inspected.
 
 A common pattern for physical device selection is to:
 
@@ -131,7 +131,7 @@ Commands are submitted to queues by first recording a series of commands into a 
 
 Note: Ideally you should reuse command buffers, but generally you can re-record them every frame without a large performance hit, and it makes some things easier (e.g. sending uniform buffers to shaders).
 
-Also, you can submit multiple command buffers to a single queue. One reason why this is useful is because it _can_ allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later).
+Also, you can submit multiple command buffers to a single queue. One reason why this is useful is that it _can_ allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later).
 
 Finally, commands recorded in command buffers can perform:
 
@@ -178,16 +178,16 @@ cmd.end();
 ```
 </details>
 
-The last thing to know about command buffers is that some commands that perform actions (e.g. draw) do so based on the current state set by commands since the start of the command buffer. This means that in the above code example, `cmd.draw()` will operate on the current state set by `cmd.bindVertex()` in the previous line. This "synchronization guarantee", that one command will finish executing before the next one starts, is usually not true.
+Last thing! Some commands that perform actions (e.g. draw vertices) do so based on the current state (e.g. the currently bound array of vertices) set by commands since the start of the command buffer. This means that in the above code example, `cmd.draw()` will operate on the current state set by `cmd.bindVertex()` in the previous line. This "synchronization guarantee", that one command will finish executing before the next one starts, is usually not true.
 
 ## Synchronization
-GPUs are optimized for operation throughput, and because of this (with a few exceptions) **_commands are not executed in the order they were recorded in._** The first action performing command in a command buffer isn't guaranteed to finish executing before the last action command in that buffer. The first command buffer submitted to a queue won't necessarily finish any commands before a later command buffer starts. The same thing applies to command buffers submitted on different queues and multiple subpasses.
+GPUs are optimized for operation throughput, and because of this (with a few exceptions) **_commands are not executed in the order they were recorded in._** The first command that performs an action in a command buffer isn't guaranteed to finish executing before the last action command in that buffer. The first command buffer submitted to a queue won't necessarily finish any commands before a later command buffer starts. The same thing applies to command buffers submitted on different queues and multiple subpasses.
 
 At places the Vulkan spec is confusing on this topic, but the TL;DR is that this is true unless a **synchronization object** is used (or with state setting commands within a single command buffer).
 
 There are a few different types of synchronization objects:
 
-- **Fences** (GPU to CPU sync) ---> EX: ensure there's only two rendered frames at a time in the swap chain (i.e. double buffering)
+- **Fences** (GPU to CPU sync) ---> EX: ensure there are only two rendered frames at a time in the swap chain (i.e. double buffering)
 
 - **Semaphores** (GPU to GPU sync across queues) ---> EX: wait for frame to finish rendering before presenting it
 
@@ -204,7 +204,7 @@ There are two types of stages in the graphics pipeline: fixed-functions and shad
 
 **Fixed-functions** complete operations that can be tweaked with parameters, but the way they work is predefined. Anything in the graphics pipeline that isn't a shader is a fixed function.
 
-**Shaders** are user-created programs that execute in the graphics pipeline. They can read from input variables (e.g. position of vertex / fragment / light) and run on GPUs, which are great at parallel computing tasks, such as applying the same lighting rule for every one of the 2 millions pixels on your screen or rotating a 3D model with thousands of vertices.
+**Shaders** are user-created programs that execute in the graphics pipeline. They can read from input variables (e.g. position of vertex / fragment / light) and run on GPUs, which are great at parallel computing tasks such as applying the same lighting rule for every one of the 2 million pixels on your screen or rotating a 3D model with thousands of vertices.
 
 ![A single 3D model with different shaders applied to it can look very different (Rodrigo Toledo)](https://www.researchgate.net/profile/Rodrigo_Toledo/publication/262317607/figure/fig1/AS:296710707400714@1447752753953/Results-from-different-shader-examples-In-the-first-line-there-are-some-basic-examples.png)
 
@@ -218,7 +218,7 @@ A simplified overview of the graphics pipeline consists of 7 stages:
 
 4. **Geometry Shader:** Optional. Runs on every primitive (triangle, line, point) and can discard or output more primitives. This stage is often not used because its performance isn't great on most graphics cards.
 
-5. **Rasterization:** Discretizes the primitives into fragments (the data necessary to generate a pixel). Fragments that fall outside the screen, and fragments that are behind other primitives are discarded. 
+5. **Rasterization:** Discretizes the primitives into fragments (the data necessary to generate a pixel). Fragments that fall outside the screen and fragments that are behind other primitives are discarded. 
 
 6. **Fragment Shader:** Runs on every fragment and determines its color, depth value, and which framebuffer the fragment is written to. Often uses interpolated data from the vertex shader such as surface normals to apply lighting.
 
@@ -227,7 +227,7 @@ A simplified overview of the graphics pipeline consists of 7 stages:
 ### Shader Modules
 Unlike OpenGL, shader code in Vulkan has to be in a bytecode format called SPIR-V, as opposed to human-readable syntax like GLSL.
 
-The advantage of using of using a bytecode format is that the compilers to turn shader code into native GPU code are significantly less complex. This leads to SPIR-V shader code being more reliable across GPU vendors.
+The advantage of using a bytecode format is that the compilers to turn shader code into native GPU code are significantly less complex. This leads to SPIR-V shader code being more reliable across GPU vendors.
 
 However, shaders are still commonly written in GLSL, and later compiled to SPIR-V using a tool called `glslc` (included in the Vulkan SDK). SPIR-V can be passed to the graphics pipeline by reading the bytecode, and then wrapping it in a `vk::ShaderModule` object, which specifies the entry point function in the shader, and assigning it to a specific stage of the graphics.
 
@@ -238,9 +238,9 @@ We've done all of this work to render an image, now we need to present that imag
 
 A window surface allows you to interact with platform specific display systems.
 
-A swap chain is an array of at least two presentable images. The first image is the screenbuffer, which is the image presented to the screen, and later images are backbuffers. If you don't use a backbuffer and directly send new images to the screen buffer, image tearing (where the top portion of the screen contains the old image and the bottom portion contains the old image) will occur while the monitor is refreshing.
+A swap chain is an array of at least two presentable images. The first image is the screenbuffer, which is the image presented to the screen, and later images are backbuffers. If you don't use a backbuffer and directly send new images to the screenbuffer, image tearing (where the top portion of the screen contains the old image and the bottom portion contains the old image) will occur while the monitor is refreshing.
 
-![Image tearing caused by directly sending images to the screen buffer (Direct2D Succinctly)](https://www.syncfusion.com/books/Direct2D_Succinctly/Images/12.png)
+![Image tearing caused by directly sending images to the screenbuffer (Direct2D Succinctly)](https://www.syncfusion.com/books/Direct2D_Succinctly/Images/12.png)
 
 Using a screenbuffer and a single backbuffer is known as a _double buffer_. This technique prevents image tearing.
 
@@ -251,7 +251,7 @@ To bring it all together, in a Vulkan application:
 
 - Commands are recorded in command buffers and render passes, which are submitted to queues. The GPU goes through the queues and executes the commands in them
 
-- To guarantee that certain commands occur after other commands complete, synchronization objects have to be used.
+- To guarantee that certain commands occur after other commands finish executing, synchronization objects have to be used.
 
 - Some commands are involved with stages in the graphics pipeline, which can either be shaders or fixed functions, and turns 3D data into a 2D image
 
