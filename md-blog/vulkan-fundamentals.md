@@ -7,7 +7,7 @@ url: "vulkan-fundamentals"
 
 # Fundamentals of the Vulkan Graphics API: Why Rendering a Triangle is Complicated
 
-The other day my dad was asking me why I was proud of this triangle on my laptop.
+Last week, my dad was asking me why I was proud of this triangle on my laptop.
 
 ![](../img/vkTriangle.jpg)
 

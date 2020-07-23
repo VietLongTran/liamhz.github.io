@@ -1,4 +1,52 @@
 /* Mobile specific */
+body {
+  width: 92%;
+  max-width: 80ch;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 0;
+  vertical-align: baseline;
+}
+
+p, ol, ul, li, summary {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+code > span {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+main > div > ul li {
+  list-style-type: initial;
+  margin-bottom: 0rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+main > div > ul {
+  padding-left: 1.5rem;
+}
+
+figure { 
+  margin: 0;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: 1rem auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+}
+
 nav li {
   display: inline;
   margin-right: 3%;
@@ -27,6 +75,10 @@ h2 {
 
 /* Desktop specific */
 @media only screen and (min-width: 768px) {
+  body {
+    max-width: 100ch;
+  }
+
   nav {
     position: absolute;
     top: 3rem;
@@ -53,6 +105,46 @@ h2 {
     font-size: 2.2rem;
     line-height: 3rem; 
   }
+
+  p {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding-right: 0;
+    vertical-align: baseline;
+  }
+
+  p, ol, ul, li, summary {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+
+  main > div > ul li {
+    list-style-type: initial;
+    margin-bottom: 0rem;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+
+  code > span {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+
+  body {
+    width: 85%;
+  }
+
+  img {
+    max-height: 20rem;
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  figcaption {
+    font-size: 1.0rem;
+  }
 }
 
 /* Nav links */
@@ -74,15 +166,6 @@ nav a {
   color: #007bff;
 }
 
-/* Main content list */
-
-main > div > ul li {
-  list-style-type: initial;
-  margin-bottom: 0.7rem;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
 main a {
   text-decoration: none;
   color: #007bff;
@@ -94,30 +177,11 @@ main ul {
 
 /* Blog */
 body {
-  max-width: 100ch;
-  width: 85%;
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", "Arial", sans-serif;
   color: #111;
   counter-reset: sidenote-counter; 
-}
-
-p {
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  padding-right: 0;
-  vertical-align: baseline;
-}
-
-p, ol, ul, li, summary {
-  font-size: 1.3rem;
-  line-height: 1.9rem;
-}
-
-code > span {
-  font-size: 1.3rem;
-  line-height: 1.9rem;
 }
 
 h1, h2, h3, h4 {
@@ -145,19 +209,10 @@ h3 {
 
 figcaption {
   text-align: center;
-  font-size: 1.0rem;
 }
 
 main.main-list li {
   margin-bottom: 1.0rem;
-}
-
-img {
-  max-height: 20rem;
-  height: 100%;
-  width: auto;
-  display: block;
-  margin: 1rem auto;
 }
 
 blockquote {
