@@ -269,5 +269,5 @@ Feel free to contact me on [Twitter][tprofile]. Feedback and comments are apprec
 [tprofile]: https://twitter.com/LiamHinzman
 
 [001]: https://www.khronos.org/registry/vulkan/specs/1.2/html/vkspec.html
-[002]: https://github.com/KhronosGroup/Vulkan-Hpp/Vulkan 
+[002]: https://github.com/KhronosGroup/Vulkan-Hpp/
 [003]: https://github.com/mermaid-js/mermaid/issues/548
