@@ -99,6 +99,7 @@ int rateDeviceSuitability(vk::PhysicalDevice physicalDevice) {
     return 0;       // Require geometry shaders
   }
 
+  return score;
 }
 ```
 </details>
