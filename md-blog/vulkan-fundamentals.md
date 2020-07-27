@@ -192,9 +192,9 @@ There are a few different types of synchronization objects:
 
 - **Semaphores** (GPU to GPU sync across queues) ---> EX: wait for frame to finish rendering before presenting it
 
-- **Barriers** (Synch within a command buffer / pipeline) --> EX: start compute shader execution as soon as the vertex shader is finished
+- **Barriers** (Sync within a command buffer / pipeline) --> EX: start compute shader execution as soon as the vertex shader is finished
 
-- **Subpass Dependencies** (Synch between subpasses) --> EX: wait for the normal and albedo attachments to complete before starting the lighting rendering subpass.
+- **Subpass Dependencies** (Sync between subpasses) --> EX: wait for the normal and albedo attachments to complete before starting the lighting rendering subpass.
 
 Synchronization is closely tied to the **graphics pipeline.**
 

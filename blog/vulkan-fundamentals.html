@@ -167,8 +167,8 @@
 <ul>
 <li><p><strong>Fences</strong> (GPU to CPU sync) —&gt; EX: ensure there are only two rendered frames at a time in the swap chain (i.e. double buffering)</p></li>
 <li><p><strong>Semaphores</strong> (GPU to GPU sync across queues) —&gt; EX: wait for frame to finish rendering before presenting it</p></li>
-<li><p><strong>Barriers</strong> (Synch within a command buffer / pipeline) –&gt; EX: start compute shader execution as soon as the vertex shader is finished</p></li>
-<li><p><strong>Subpass Dependencies</strong> (Synch between subpasses) –&gt; EX: wait for the normal and albedo attachments to complete before starting the lighting rendering subpass.</p></li>
+<li><p><strong>Barriers</strong> (Sync within a command buffer / pipeline) –&gt; EX: start compute shader execution as soon as the vertex shader is finished</p></li>
+<li><p><strong>Subpass Dependencies</strong> (Sync between subpasses) –&gt; EX: wait for the normal and albedo attachments to complete before starting the lighting rendering subpass.</p></li>
 </ul>
 <p>Synchronization is closely tied to the <strong>graphics pipeline.</strong></p>
 <h2 id="the-graphics-pipeline">The Graphics Pipeline</h2>
