@@ -36,7 +36,7 @@
 <h2 id="what-vulkan-is">What Vulkan Is</h2>
 <p>Vulkan is a graphics API that is designed to provide an accurate abstraction of how modern graphics processing units (GPUs) work. Unlike OpenGL, Vulkan is very verbose. Every detail related to the graphics API needs to be set up from scratch. The upsides to this are that you only use what you choose to, and you can better understand what’s going on in your application and in doing so achieve much higher performance.</p>
 <p>This article is intended to be a concise overview of the fundamentals of Vulkan. It was written for somebody who knew Vulkan but has forgotten many of the details (i.e. future me). Most of the information here comes from the <a href="https://www.khronos.org/registry/vulkan/specs/1.2/html/vkspec.html">Vulkan 1.2 Spec</a>.</p>
-<p>Note: This article uses the <a href="https://github.com/KhronosGroup/Vulkan-Hpp/Vulkan">C++ bindings</a> for Vulkan</p>
+<p>Note: This article uses the <a href="https://github.com/KhronosGroup/Vulkan-Hpp/">C++ bindings</a> for Vulkan</p>
 <h2 id="vulkan-in-a-nutshell">Vulkan in a Nutshell</h2>
 <p><em>From a bird’s eye view, here’s how a Vulkan application works:</em></p>
 <p>Vulkan can access <strong>devices</strong>, which let you control one or more <strong>queues</strong>. Queues are how you send a list of commands to the GPU, and they can be members of one or more <strong>queue families</strong>, each of which can do different things (e.g. draw the vertices of a 3D model).</p>
@@ -101,7 +101,8 @@
 <span id="cb1-42"><a href="#cb1-42"></a>    <span class="cf">return</span> <span class="dv">0</span>;       <span class="co">// Require geometry shaders</span></span>
 <span id="cb1-43"><a href="#cb1-43"></a>  }</span>
 <span id="cb1-44"><a href="#cb1-44"></a></span>
-<span id="cb1-45"><a href="#cb1-45"></a>}</span></code></pre></div>
+<span id="cb1-45"><a href="#cb1-45"></a>  <span class="cf">return</span> score;</span>
+<span id="cb1-46"><a href="#cb1-46"></a>}</span></code></pre></div>
 </details>
 <p>With a physical device you can create a <strong>logical device</strong>.</p>
 <p>Physical devices represent the GPU, and logical devices are what you use to create resources and access <strong>queues</strong>.</p>
