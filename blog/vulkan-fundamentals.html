@@ -144,7 +144,7 @@
 <span id="cb2-3"><a href="#cb2-3"></a></span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="co">// Start recording to the command buffer and render pass</span></span>
 <span id="cb2-5"><a href="#cb2-5"></a>cmd.begin(vk::CommandBufferBeginInfo());</span>
-<span id="cb2-6"><a href="#cb2-6"></a>cmd.beginRenderPass(vk::RenderPassBeginInfo();</span>
+<span id="cb2-6"><a href="#cb2-6"></a>cmd.beginRenderPass(vk::RenderPassBeginInfo());</span>
 <span id="cb2-7"><a href="#cb2-7"></a></span>
 <span id="cb2-8"><a href="#cb2-8"></a><span class="co">// Bind a graphics pipeline (covered later)</span></span>
 <span id="cb2-9"><a href="#cb2-9"></a>cmd.bindPipeline(vk::PipelineBindPoint::eGraphics, graphicsPipeline);</span>
@@ -156,7 +156,7 @@
 <span id="cb2-15"><a href="#cb2-15"></a>cmd.draw(vertices.size(), <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>);</span>
 <span id="cb2-16"><a href="#cb2-16"></a></span>
 <span id="cb2-17"><a href="#cb2-17"></a><span class="co">// Stop recording to the render pass and command buffer</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>cmd.beginRenderPass(vk::RenderPassBeginInfo();</span>
+<span id="cb2-18"><a href="#cb2-18"></a>cmd.endRenderPass();</span>
 <span id="cb2-19"><a href="#cb2-19"></a>cmd.end();</span></code></pre></div>
 </details>
 <p>Last thing! Some commands that perform actions (e.g. draw vertices) do so based on the current state (e.g. the currently bound array of vertices) set by commands since the start of the command buffer. This means that in the above code example, <code>cmd.draw()</code> will operate on the current state set by <code>cmd.bindVertex()</code> in the previous line. This “synchronization guarantee”, that one command will finish executing before the next one starts, is usually not true.</p>
@@ -197,7 +197,7 @@
 <p><strong><em>Swap Chains and Window Surfaces</em></strong></p>
 <p>We’ve done all of this work to render an image, now we need to present that image to a <strong>window surface</strong> from the <strong>swap chain</strong>.</p>
 <p>A window surface allows you to interact with platform specific display systems.</p>
-<p>A swap chain is an array of at least two presentable images. The first image is the screenbuffer, which is the image presented to the screen, and later images are backbuffers. If you don’t use a backbuffer and directly send new images to the screenbuffer, image tearing (where the top portion of the screen contains the old image and the bottom portion contains the old image) will occur while the monitor is refreshing.</p>
+<p>A swap chain is an array of at least two presentable images. The first image is the screenbuffer, which is the image presented to the screen, and later images are backbuffers. If you don’t use a backbuffer and directly send new images to the screenbuffer, image tearing (where the top portion of the screen contains the new image and the bottom portion contains the old image) will occur while the monitor is refreshing.</p>
 <figure>
 <img src="https://www.syncfusion.com/books/Direct2D_Succinctly/Images/12.png" alt="" /><figcaption>Image tearing caused by directly sending images to the screenbuffer (Direct2D Succinctly)</figcaption>
 </figure>

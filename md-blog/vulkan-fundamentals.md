@@ -162,7 +162,7 @@ vk::CommandBuffer cmd;
 
 // Start recording to the command buffer and render pass
 cmd.begin(vk::CommandBufferBeginInfo());
-cmd.beginRenderPass(vk::RenderPassBeginInfo();
+cmd.beginRenderPass(vk::RenderPassBeginInfo());
 
 // Bind a graphics pipeline (covered later)
 cmd.bindPipeline(vk::PipelineBindPoint::eGraphics, graphicsPipeline);
@@ -174,7 +174,7 @@ cmd.bindVertexBuffers(0, 1, vertexBuffers, offsets);
 cmd.draw(vertices.size(), 1, 0, 0);
 
 // Stop recording to the render pass and command buffer
-cmd.beginRenderPass(vk::RenderPassBeginInfo();
+cmd.endRenderPass();
 cmd.end();
 ```
 </details>
@@ -239,7 +239,7 @@ We've done all of this work to render an image, now we need to present that imag
 
 A window surface allows you to interact with platform specific display systems.
 
-A swap chain is an array of at least two presentable images. The first image is the screenbuffer, which is the image presented to the screen, and later images are backbuffers. If you don't use a backbuffer and directly send new images to the screenbuffer, image tearing (where the top portion of the screen contains the old image and the bottom portion contains the old image) will occur while the monitor is refreshing.
+A swap chain is an array of at least two presentable images. The first image is the screenbuffer, which is the image presented to the screen, and later images are backbuffers. If you don't use a backbuffer and directly send new images to the screenbuffer, image tearing (where the top portion of the screen contains the new image and the bottom portion contains the old image) will occur while the monitor is refreshing.
 
 ![Image tearing caused by directly sending images to the screenbuffer (Direct2D Succinctly)](https://www.syncfusion.com/books/Direct2D_Succinctly/Images/12.png)
 
