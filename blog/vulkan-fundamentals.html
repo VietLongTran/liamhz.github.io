@@ -119,7 +119,7 @@
 </ul>
 <p>A physical device will give you access to several queues of different <strong>queue families</strong>, and when you create a queue it will be an index to a queue of a matching queue family on the device. Queue families are queues that have the same properties as one another (e.g. perform both graphics and compute operations).</p>
 <p>Commands are submitted to queues by first recording a series of commands into a command buffer and then submitting the entire command buffer to a queue with <code>vk::Queue::submit()</code>.</p>
-<p>Note: Command buffers are usually re-recorded every frame (and not reused) to account for the change in workload in an application (e.g. drawing a new 3D model after an event). Luckily, Vulkan makes recording command buffers very cheap.</p>
+<p>Note: Command buffers are usually re-recorded every frame (and not reused) to account for the change in workload in an application (e.g. drawing a new 3D model after an event).</p>
 <p>Also, you can submit multiple command buffers to a single queue. This is useful because it <em>can</em> allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later), and it allows you to take advantage of multi-core CPUs by recording each of the command buffers in parallel on multiple threads.</p>
 <p>Finally, commands recorded in command buffers can perform:</p>
 <ul>

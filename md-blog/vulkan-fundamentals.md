@@ -126,7 +126,7 @@ A physical device will give you access to several queues of different **queue fa
 
 Commands are submitted to queues by first recording a series of commands into a command buffer and then submitting the entire command buffer to a queue with `vk::Queue::submit()`.
 
-Note: Command buffers are usually re-recorded every frame (and not reused) to account for the change in workload in an application (e.g. drawing a new 3D model after an event). Luckily, Vulkan makes recording command buffers very cheap.
+Note: Command buffers are usually re-recorded every frame (and not reused) to account for the change in workload in an application (e.g. drawing a new 3D model after an event).
 
 Also, you can submit multiple command buffers to a single queue. This is useful because it _can_ allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later), and it allows you to take advantage of multi-core CPUs by recording each of the command buffers in parallel on multiple threads.
 
