@@ -105,9 +105,7 @@
 <span id="cb1-46"><a href="#cb1-46"></a>}</span></code></pre></div>
 </details>
 <p>With a physical device you can create a <strong>logical device</strong>.</p>
-<p>Physical devices represent the GPU, and logical devices are what you use to create resources and access <strong>queues</strong>.</p>
-<p>Keeping the logical device separate from the physical device is also useful because it allows you to have multiple logical devices, each with their state and resources, for a single physical device. One example of where this would be useful is if you had a Vulkan rendering application that also used a UI Toolkit (also running on Vulkan) that was completely separate. They’d each need their own logical devices to operate, but they’re both using the same physical device.</p>
-<p>Logical device creation is also where you create queues.</p>
+<p>A logical device is basically a physical device (which represents a GPU) that is initialized and ready for work. They’re what you use to create resources and <strong>queues</strong>.</p>
 <h2 id="making-stuff-happen">Making Stuff Happen</h2>
 <p><strong><em>Queues, Command Buffers, and Render Passes</em></strong></p>
 <p>A queue is a list of commands that the GPU executes.</p>
@@ -121,8 +119,8 @@
 </ul>
 <p>A physical device will give you access to several queues of different <strong>queue families</strong>, and when you create a queue it will be an index to a queue of a matching queue family on the device. Queue families are queues that have the same properties as one another (e.g. perform both graphics and compute operations).</p>
 <p>Commands are submitted to queues by first recording a series of commands into a command buffer and then submitting the entire command buffer to a queue with <code>vk::Queue::submit()</code>.</p>
-<p>Note: Ideally you should reuse command buffers, but generally you can re-record them every frame without a large performance hit, and it makes some things easier (e.g. sending uniform buffers to shaders).</p>
-<p>Also, you can submit multiple command buffers to a single queue. One reason why this is useful is that it <em>can</em> allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later).</p>
+<p>Note: Command buffers are usually re-recorded every frame (and not reused) to account for the change in workload in an application (e.g. drawing a new 3D model after an event). Luckily, Vulkan makes recording command buffers very cheap.</p>
+<p>Also, you can submit multiple command buffers to a single queue. This is useful because it <em>can</em> allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later), and it allows you to take advantage of multi-core CPUs by recording each of the command buffers in parallel on multiple threads.</p>
 <p>Finally, commands recorded in command buffers can perform:</p>
 <ul>
 <li><strong>Actions</strong> —&gt; draw, dispatch, clear, copy, query operations etc</li>
@@ -183,7 +181,7 @@
 <ol type="1">
 <li><p><strong>Input Assembler:</strong> Collects the raw vertex data from specified buffers. Optionally, an index buffer can be used to repeat certain elements without duplicating vertex data.</p></li>
 <li><p><strong>Vertex Shader:</strong> Runs on every vertex and passes per-vertex data down the graphics pipeline. Usually applies transformations to vertices, and converts from model space to screen space.</p></li>
-<li><p><strong>Tessellation Shader:</strong> Optional. Runs on arrays of vertices (“patches”) and subdivides them into smaller primitives.</p></li>
+<li><p><strong>Tessellation:</strong> Optional. Runs on arrays of vertices (“patches”) and subdivides them into smaller primitives.</p></li>
 <li><p><strong>Geometry Shader:</strong> Optional. Runs on every primitive (triangle, line, point) and can discard or output more primitives. This stage is often not used because its performance isn’t great on most graphics cards.</p></li>
 <li><p><strong>Rasterization:</strong> Discretizes the primitives into fragments (the data necessary to generate a pixel). Fragments that fall outside the screen and fragments that are behind other primitives are discarded.</p></li>
 <li><p><strong>Fragment Shader:</strong> Runs on every fragment and determines its color, depth value, and which framebuffer the fragment is written to. Often uses interpolated data from the vertex shader such as surface normals to apply lighting.</p></li>

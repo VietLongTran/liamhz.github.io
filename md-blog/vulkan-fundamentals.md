@@ -106,11 +106,7 @@ int rateDeviceSuitability(vk::PhysicalDevice physicalDevice) {
 
 With a physical device you can create a **logical device**.
 
-Physical devices represent the GPU, and logical devices are what you use to create resources and access **queues**.
-
-Keeping the logical device separate from the physical device is also useful because it allows you to have multiple logical devices, each with their state and resources, for a single physical device. One example of where this would be useful is if you had a Vulkan rendering application that also used a UI Toolkit (also running on Vulkan) that was completely separate. They'd each need their own logical devices to operate, but they're both using the same physical device.
-
-Logical device creation is also where you create queues.
+A logical device is basically a physical device (which represents a GPU) that is initialized and ready for work. They're what you use to create resources and **queues**.
 
 ## Making Stuff Happen
 **_Queues, Command Buffers, and Render Passes_**
@@ -130,9 +126,9 @@ A physical device will give you access to several queues of different **queue fa
 
 Commands are submitted to queues by first recording a series of commands into a command buffer and then submitting the entire command buffer to a queue with `vk::Queue::submit()`.
 
-Note: Ideally you should reuse command buffers, but generally you can re-record them every frame without a large performance hit, and it makes some things easier (e.g. sending uniform buffers to shaders).
+Note: Command buffers are usually re-recorded every frame (and not reused) to account for the change in workload in an application (e.g. drawing a new 3D model after an event). Luckily, Vulkan makes recording command buffers very cheap.
 
-Also, you can submit multiple command buffers to a single queue. One reason why this is useful is that it _can_ allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later).
+Also, you can submit multiple command buffers to a single queue. This is useful because it _can_ allow you to ensure that one set of commands from a command buffer completes execution before another command buffer in the queue starts (more on this later), and it allows you to take advantage of multi-core CPUs by recording each of the command buffers in parallel on multiple threads.
 
 Finally, commands recorded in command buffers can perform:
 
@@ -215,7 +211,7 @@ A simplified overview of the graphics pipeline consists of 7 stages:
 
 2. **Vertex Shader:** Runs on every vertex and passes per-vertex data down the graphics pipeline. Usually applies transformations to vertices, and converts from model space to screen space.
 
-3. **Tessellation Shader:** Optional. Runs on arrays of vertices ("patches") and subdivides them into smaller primitives.
+3. **Tessellation:** Optional. Runs on arrays of vertices ("patches") and subdivides them into smaller primitives.
 
 4. **Geometry Shader:** Optional. Runs on every primitive (triangle, line, point) and can discard or output more primitives. This stage is often not used because its performance isn't great on most graphics cards.
 
