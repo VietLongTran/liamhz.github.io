@@ -57,52 +57,52 @@
 <details>
 <p><summary><b> Example code for physical device selection</p>
 <p>(Tip: Read the comments so you don’t get overwhelmed by code) </b></summary></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">void</span> pickPhysicalDevice() {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="co">// Get list of all physical devices that can be found by Vulkan</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="kw">auto</span> physicalDevices = instance.enumeratePhysicalDevices();</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="cf">if</span> (physicalDevices.size() == <span class="dv">0</span>) {</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="cf">throw</span> <span class="bu">std::</span>runtime_error(<span class="st">&quot;No GPUs with Vulkan support found!&quot;</span>);</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  }</span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="co">// Create list of physical devices sorted by rateDeviceSuitability</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="bu">std::</span>multimap&lt;<span class="dt">int</span>, vk::PhysicalDevice&gt; candidates;</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a>  <span class="cf">for</span> (<span class="at">const</span> <span class="kw">auto</span>&amp; physicalDevice : physicalDevices) {</span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="dt">int</span> score = rateDeviceSuitability(physicalDevice);</span>
-<span id="cb1-14"><a href="#cb1-14"></a>    candidates.insert(<span class="bu">std::</span>make_pair(score, physicalDevice));</span>
-<span id="cb1-15"><a href="#cb1-15"></a>  }</span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a>  <span class="co">// Check if best candidate meets required properties (score &gt; 0)</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a>  <span class="cf">if</span> (candidates.rbegin()-&gt;first &gt; <span class="dv">0</span>) {</span>
-<span id="cb1-19"><a href="#cb1-19"></a>    physicalDevice = candidates.rbegin()-&gt;second;</span>
-<span id="cb1-20"><a href="#cb1-20"></a>  } <span class="cf">else</span> {</span>
-<span id="cb1-21"><a href="#cb1-21"></a>    <span class="cf">throw</span> <span class="bu">std::</span>runtime_error(<span class="st">&quot;failed to find a suitable GPU!&quot;</span>);</span>
-<span id="cb1-22"><a href="#cb1-22"></a>  }</span>
-<span id="cb1-23"><a href="#cb1-23"></a>}</span>
-<span id="cb1-24"><a href="#cb1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="dt">int</span> rateDeviceSuitability(vk::PhysicalDevice physicalDevice) {</span>
-<span id="cb1-26"><a href="#cb1-26"></a>  <span class="co">// Get all features / properties of a given physical device</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a>  vk::PhysicalDeviceFeatures deviceFeatures</span>
-<span id="cb1-28"><a href="#cb1-28"></a>    = physicalDevice.getFeatures();</span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a>  vk::PhysicalDeviceProperties deviceProperties</span>
-<span id="cb1-31"><a href="#cb1-31"></a>    = physicalDevice.getProperties();</span>
-<span id="cb1-32"><a href="#cb1-32"></a></span>
-<span id="cb1-33"><a href="#cb1-33"></a>  <span class="dt">int</span> score = <span class="dv">0</span>;</span>
-<span id="cb1-34"><a href="#cb1-34"></a></span>
-<span id="cb1-35"><a href="#cb1-35"></a>  <span class="cf">if</span> (   deviceProperties.deviceType</span>
-<span id="cb1-36"><a href="#cb1-36"></a>      == vk::PhysicalDeviceType::eDiscreteGpu)</span>
-<span id="cb1-37"><a href="#cb1-37"></a>  {</span>
-<span id="cb1-38"><a href="#cb1-38"></a>    score += <span class="dv">1000</span>;  <span class="co">// Prefer dedicated GPUs</span></span>
-<span id="cb1-39"><a href="#cb1-39"></a>  }</span>
-<span id="cb1-40"><a href="#cb1-40"></a></span>
-<span id="cb1-41"><a href="#cb1-41"></a>  <span class="cf">if</span> (!deviceFeatures.geometryShader) {</span>
-<span id="cb1-42"><a href="#cb1-42"></a>    <span class="cf">return</span> <span class="dv">0</span>;       <span class="co">// Require geometry shaders</span></span>
-<span id="cb1-43"><a href="#cb1-43"></a>  }</span>
-<span id="cb1-44"><a href="#cb1-44"></a></span>
-<span id="cb1-45"><a href="#cb1-45"></a>  <span class="cf">return</span> score;</span>
-<span id="cb1-46"><a href="#cb1-46"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">void</span> pickPhysicalDevice() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  <span class="co">// Get list of all physical devices that can be found by Vulkan</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  <span class="kw">auto</span> physicalDevices = instance.enumeratePhysicalDevices();</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  <span class="cf">if</span> (physicalDevices.size() == <span class="dv">0</span>) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    <span class="cf">throw</span> <span class="bu">std::</span>runtime_error(<span class="st">&quot;No GPUs with Vulkan support found!&quot;</span>);</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>  <span class="co">// Create list of physical devices sorted by rateDeviceSuitability</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>  <span class="bu">std::</span>multimap&lt;<span class="dt">int</span>, vk::PhysicalDevice&gt; candidates;</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>  <span class="cf">for</span> (<span class="at">const</span> <span class="kw">auto</span>&amp; physicalDevice : physicalDevices) {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    <span class="dt">int</span> score = rateDeviceSuitability(physicalDevice);</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    candidates.insert(<span class="bu">std::</span>make_pair(score, physicalDevice));</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>  }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>  <span class="co">// Check if best candidate meets required properties (score &gt; 0)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>  <span class="cf">if</span> (candidates.rbegin()-&gt;first &gt; <span class="dv">0</span>) {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>    physicalDevice = candidates.rbegin()-&gt;second;</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>  } <span class="cf">else</span> {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>    <span class="cf">throw</span> <span class="bu">std::</span>runtime_error(<span class="st">&quot;failed to find a suitable GPU!&quot;</span>);</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>  }</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a><span class="dt">int</span> rateDeviceSuitability(vk::PhysicalDevice physicalDevice) {</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>  <span class="co">// Get all features / properties of a given physical device</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a>  vk::PhysicalDeviceFeatures deviceFeatures</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a>    = physicalDevice.getFeatures();</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>  vk::PhysicalDeviceProperties deviceProperties</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a>    = physicalDevice.getProperties();</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a>  <span class="dt">int</span> score = <span class="dv">0</span>;</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true"></a>  <span class="cf">if</span> (   deviceProperties.deviceType</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true"></a>      == vk::PhysicalDeviceType::eDiscreteGpu)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true"></a>  {</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true"></a>    score += <span class="dv">1000</span>;  <span class="co">// Prefer dedicated GPUs</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true"></a>  }</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true"></a>  <span class="cf">if</span> (!deviceFeatures.geometryShader) {</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true"></a>    <span class="cf">return</span> <span class="dv">0</span>;       <span class="co">// Require geometry shaders</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true"></a>  }</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true"></a>  <span class="cf">return</span> score;</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true"></a>}</span></code></pre></div>
 </details>
 <p>With a physical device you can create a <strong>logical device</strong>.</p>
 <p>A logical device is basically a physical device (which represents a GPU) that is initialized and ready for work. They’re what you use to create resources and <strong>queues</strong>.</p>
@@ -137,25 +137,25 @@
 <p>Deferred rendering is a story for another day, but the gist of it is that you can store most of the geometry information in an initial render pass, and <em>defer</em> expensive rendering operations like lighting for later.</p>
 <details>
 <p><summary><b> Example code for recording to a command buffer and render pass </summary></b></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">// Create a command buffer</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>vk::CommandBuffer cmd;</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co">// Start recording to the command buffer and render pass</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>cmd.begin(vk::CommandBufferBeginInfo());</span>
-<span id="cb2-6"><a href="#cb2-6"></a>cmd.beginRenderPass(vk::RenderPassBeginInfo());</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">// Bind a graphics pipeline (covered later)</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>cmd.bindPipeline(vk::PipelineBindPoint::eGraphics, graphicsPipeline);</span>
-<span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co">// Bind vertex buffers containing info needed to draw vertices</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>cmd.bindVertexBuffers(<span class="dv">0</span>, <span class="dv">1</span>, vertexBuffers, offsets);</span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co">// Draw the buffer currently bound to this command buffer</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>cmd.draw(vertices.size(), <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>);</span>
-<span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co">// Stop recording to the render pass and command buffer</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>cmd.endRenderPass();</span>
-<span id="cb2-19"><a href="#cb2-19"></a>cmd.end();</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">// Create a command buffer</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>vk::CommandBuffer cmd;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="co">// Start recording to the command buffer and render pass</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>cmd.begin(vk::CommandBufferBeginInfo());</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>cmd.beginRenderPass(vk::RenderPassBeginInfo());</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co">// Bind a graphics pipeline (covered later)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>cmd.bindPipeline(vk::PipelineBindPoint::eGraphics, graphicsPipeline);</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="co">// Bind vertex buffers containing info needed to draw vertices</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>cmd.bindVertexBuffers(<span class="dv">0</span>, <span class="dv">1</span>, vertexBuffers, offsets);</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a><span class="co">// Draw the buffer currently bound to this command buffer</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>cmd.draw(vertices.size(), <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>);</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a><span class="co">// Stop recording to the render pass and command buffer</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>cmd.endRenderPass();</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>cmd.end();</span></code></pre></div>
 </details>
 <p>Last thing! Some commands that perform actions (e.g. draw vertices) do so based on the current state (e.g. the currently bound array of vertices) set by commands since the start of the command buffer. This means that in the above code example, <code>cmd.draw()</code> will operate on the current state set by <code>cmd.bindVertex()</code> in the previous line. This “synchronization guarantee”, that one command will finish executing before the next one starts, is usually not true.</p>
 <h2 id="synchronization">Synchronization</h2>

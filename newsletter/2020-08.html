@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      <meta name="author" content="Liam Hinzman" />
+        <meta name="dcterms.date" content="2020-08-24" />
+        <title>August 2020 | Liam Hinzman</title>
+      <link rel="stylesheet" href="../styles/page.css" />
+      <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="../scripts/highlight/atom-one-light.css">
+  <script src="../scripts/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="https://drive.google.com/open?id=1zR2LP0FWJ7bk6MSCXfdzHaNkoiy89Naa">Resume</a></li>
+            <li><a href="../newsletter.html">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+<h1 id="august-2020-newsletter">August 2020 Newsletter</h1>
+<!--
+TODO Add remainder of banger SSC blog posts I read this month and get excerpts
+TODO Send published version of this to Bri, Jay, and Aadil.
+TODO Create Substack version of this newsletter
+TODO Update old Substack newsletters to new formatting
+-->
+<h2 id="personal">Personal</h2>
+<p><a href="https://github.com/LiamHz/Excal">Built</a> the first version of Excal, my Vulkan rendering engine. Also ported my Perlin noise terrain generator from OpenGL to Excal.</p>
+<p><a href="https://twitter.com/LiamHinzman/status/1296134922537762817?s=20">Received</a> a Vulkan t-shirt from Khronos, the parent company of Vulkan.</p>
+<p><a href="https://github.com/LiamHz/real-time-rendering-notes/blob/master/rtr.md">Wrote</a> notes on the how the graphics pipeline, GPU, and CPU Cache work while reading through Real-time Rendering.</p>
+<h2 id="links">Links</h2>
+<h3 id="slate-star-codex">Slate Star Codex</h3>
+<p><a href="https://slatestarcodex.com/2014/12/17/the-toxoplasma-of-rage/">The Toxoplasma of Rage</a></p>
+<blockquote>
+<p>Publicizing how strongly you believe an accusation that is obviously true signals nothing… Only controversial things get spread. A rape allegation will only be spread if it’s dubious enough to split people in half along lines corresponding to identity politics… This is why so much coverage [on rape allegations] focuses on the proposal that all accused rapists should be treated as guilty until proven innocent.</p>
+</blockquote>
+<p><a href="http://slatestarcodex.com/2020/05/12/studies-on-slack/">Studies on Slack</a></p>
+<blockquote>
+<p>The Old World contains Rome and China. The New World contains Aztecs. Rome and China are very close to each other. Now what happens [if this was a game of Civilization V]?</p>
+<p>Rome and China spend the Stone, Bronze, and Iron Ages hacking each other to bits. Aztecs spend those Ages building cities, researching technologies, and building unique Wonders of the World that provide powerful bonuses. In 1492, they discover Galleons and start crossing the ocean. The powerful and advanced Aztec empire crushes the exhausted axe-wielding Romans and Chinese.</p>
+<p>This is another story about slack. The Aztecs had it – they were under no competitive pressure to do things that paid off next turn. The Romans and Chinese didn’t – they had to be at the top of their game every single turn, or their neighbor would conquer them. If there was an option that made you 10% weaker next turn in exchange for making you 100% stronger ten turns down the line, the Aztecs could take it without a second thought; the Romans and Chinese would probably have to pass.</p>
+</blockquote>
+<p><a href="http://lesswrong.com/lw/2as/diseased_thinking_dissolving_questions_about/">Diseased Thinking: Dissolving Questions about Disease</a></p>
+<h3 id="computer-graphics">Computer Graphics</h3>
+<p><a href="https://vimeo.com/417882964">Unreal Engine 5 Revealed</a><br />
+<em>10m video. A gorgeous real-time demo of Unreal Engine 5 (first revealed in May 2020), its new rendering engine (Nanite), global illumination (Lumen), and particle system (Niagra).</em></p>
+<p><a href="https://www.eurogamer.net/articles/digitalfoundry-2020-unreal-engine-5-playstation-5-tech-demo-analysis">Inside Unreal Engine 5</a><br />
+<em>High level overview of how UE5’s Nanite (rendering engine) and Lumen (global illumination) work.</em></p>
+<p><a href="https://www.reddit.com/r/hardware/comments/gkcd9b/pixels_triangles_whats_the_difference_how_i_think/">How I think Nanite Renders a Demo with 10^11 Triangles</a><br />
+<em>Speculation on how virtual geometry images could be how UE5’s new rendering engine “Nanite” achieves micropolygon rendering. TL;DR The positions of vertices can be stored in a texture image. This allows for techniques like image compression, mipmapping, and easier operations on local patches of geometry (e.g. view-dependent downsampling). NOTE: <a href="https://twitter.com/BrianKaris/status/1260734555532611584">This is not</a> the technique used, but it’s still a good read.</em></p>
+<p><a href="http://www.aortiz.me/2018/12/21/CG.html">A Brief Primer on Efficient Rendering Algorithms and Clustered Shading</a><br />
+<em>Great explanations of how forward and deferred shading works, their limitations, and the advantages of clustered shading (and how to implement it).</em></p>
+<h3 id="computer-science">Computer Science</h3>
+<p>When building Excal, the most important architectural choice I made was to get rid of classes in the core of my engine and instead have “context-free” functions that only modify non-const arguments. This isn’t quite functional programming, but it was inspired by John Carmack’s post on the topic.</p>
+<p><a href="https://gamasutra.com/view/news/169296/Indepth_Functional_programming_in_C.php">Functional Programming in C++ (John Carmack)</a></p>
+<blockquote>
+<p>A large fraction of the flaws in software development are due to programmers not fully understanding all the possible states their code may execute in… Programming in a functional style makes the state presented to your code explicit, which makes it much easier to reason about.</p>
+</blockquote>
+<p><a href="https://www.lihaoyi.com/post/WhatsFunctionalProgrammingAllAbout.html">What’s Functional Programming All About</a><br />
+<em>Clear explanation of what functional programming is, why it’s useful, and memorable mental models.</em></p>
+<h3 id="computer-architecture">Computer Architecture</h3>
+<p><a href="https://en.wikipedia.org/wiki/CPU_cache">CPU Cache (Wikipedia)</a><br />
+<em>Explanations of CPU cache concepts including associativity, cache misses, address translation, and multi-level caches.</em></p>
+<p><a href="http://fuuu.be/polytech/INFOF201/Bouquin%20syst%C3%A8mes%20d_exploitations.pdf">Structured Computer Organization - Section 4.5 “Improving Performance”</a><br />
+<em>Explanations of CPU cache memory, branch prediction, out-of-order execution, and speculative execution.</em></p>
+<p><a href="https://www.tweaktown.com/news/71340/understanding-the-ps5s-ssd-deep-dive-into-next-gen-storage-tech/index.html">Understanding the PS5’s SSD</a><br />
+<em>The PS5’s SSD and RAM is so fast, it’s like you have 825GB of RAM and 16GB of CPU cache. Its SSD has memory bandwidth of 5.5 GB/s, and its 16GB of RAM is 448 GB/s. This results in the PS5’s RAM only holding assets and data for the next 1 second of gameplay, while the PS4’s 8GB RAM held assets for the next 30 seconds of gameplay.</em></p>
+<h3 id="misc">Misc</h3>
+<!-- TODO Add summary -->
+<p><a href="https://guzey.com/how-to-make-friends-over-the-internet/">How to Make Friends Over the Internet</a><br />
+</p>
+<p><a href="https://guzey.com/personal/my-journal/">My Journal; Years of Depression and Self-loathing; Overcoming Video Game Addiction</a><br />
+</p>
+<p><a href="https://www.eugenewei.com/blog/2020/8/3/tiktok-and-the-sorting-hat">TikTok and the Sorting Hat</a></p>
+<p><a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a><br />
+<em>Advice on how to write useful commit messages, such as 50 character subject line, hard wrapping paragraphs on 72 characters, and using the imperative in subject lines (i.e. "This commit will…).</em></p>
+<p><a href="http://becomingeden.com/what-i-wish-i-knew-in-college/">What I Wish I Knew In College</a></p>
+<blockquote>
+<p>While it may not always seem like it from the inside, your college years are going to give you the most free schedule you are ever likely to have. This, in my opinion, is the biggest comparative advantage of your undergrad years, and thus represents the most important factor to get right.</p>
+<p>Sit down right now and write out a list of everything you want to do… When you’re done, look at the list, and think about what’s required to get there… While you are in college, you have a unique opportunity to [accomplish] those things that require lots of time.</p>
+</blockquote>
+<h1 id="section"><!-- August 2020 Links --></h1>
+        </div>
+    </main>
+    <script data-goatcounter="https://liamhinzman.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
