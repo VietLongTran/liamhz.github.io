@@ -227,3 +227,7 @@ blockquote {
   color: #6a737d;
   border-left: 0.25rem solid #dfe2e5;
 }
+
+summary {
+  margin-top: -0.8rem;
+}
