@@ -21,4 +21,7 @@ _Meals I love that are cheap, tasty, and easy to make_
 [<img src="img/cooking/butterless-butter-chicken.jpg">](cooking/butterless-butter-chicken.html)
 [Butterless Butter Chicken](cooking/butterless-butter-chicken.html)
 
+[<img src="img/cooking/moms-spaghetti.jpg">](cooking/moms-spaghetti.html)
+[Mom's Spaghetti](cooking/moms-spaghetti.html)
+
 </div>
