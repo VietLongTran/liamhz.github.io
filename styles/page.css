@@ -13,19 +13,19 @@ p {
 
 p, ol, ul, li, summary {
   font-size: 1.1rem;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 
 code > span {
   font-size: 1.1rem;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 
 main > div > ul li {
   list-style-type: initial;
   margin-bottom: 0rem;
   font-size: 1.1rem;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 
 main > div > ul {
@@ -99,7 +99,7 @@ h2 {
   }
 
   body {
-    max-width: 85ch;
+    max-width: 80ch;
   }
 
   nav {
@@ -138,19 +138,19 @@ h2 {
 
   p, ol, ul, li, summary {
     font-size: 1.2rem;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
   }
 
   main > div > ul li {
     list-style-type: initial;
     margin-bottom: 0rem;
     font-size: 1.2rem;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
   }
 
   code > span {
     font-size: 1.2rem;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
   }
 
   div.sourceCode {
