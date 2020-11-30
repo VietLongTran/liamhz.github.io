@@ -22,7 +22,7 @@ Now that I've dropped out and have a job I'm really happy with, I'm thinking "Wh
 
 The stories of all the different relationships in Norwegian Wood has let me see possible futures for myself: the different types of relationships I could have or people I could become.
 
-Characters who are possible futures include:
+Characters from the novel who are possible futures for me include:
 
 - Taking care of people who I love but have no future
 - Sticking with people who I love despite their flaws
