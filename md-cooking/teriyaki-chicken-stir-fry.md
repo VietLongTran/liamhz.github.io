@@ -6,7 +6,6 @@ url: "teriyaki-chicken-stir-fry"
 img: "img/cooking/teriyaki-chicken-stir-fry.jpg"
 ...
 
-# Teriyaki Chicken Stir Fry
 <div class="recipe-image">
 ![](../img/cooking/teriyaki-chicken-stir-fry.jpg)
 </div>

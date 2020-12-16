@@ -5,8 +5,6 @@ date: "2020-05-16"
 url: signaling-conversations
 ...
 
-# Signaling: Why People Have Conversations
-
 How would you convince somebody that you're an expert in quantum mechanics?
 
 If you're not an expert in this field, _you shouldn't be able to effectively apply any method you can imagine._ If you could, then it wouldn't be a useful signal.

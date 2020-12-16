@@ -6,7 +6,6 @@ url: "ground-beef-bulgogi"
 img: "img/cooking/ground-beef-bulgogi.png"
 ...
 
-# Ground Beef Bulgogi
 <div class="recipe-image">
 ![](../img/cooking/ground-beef-bulgogi.png)
 </div>

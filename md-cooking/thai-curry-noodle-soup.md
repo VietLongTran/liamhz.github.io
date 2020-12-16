@@ -6,7 +6,6 @@ url: "thai-curry-noodle-soup"
 img: "img/cooking/thai-curry-noodle-soup.jpg"
 ...
 
-# Thai Curry Noodle Soup
 <div class="recipe-image">
 ![](../img/cooking/thai-curry-noodle-soup.jpg)
 </div>

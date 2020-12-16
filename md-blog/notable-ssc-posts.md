@@ -5,8 +5,6 @@ date: "2020-08-31"
 url: "notable-ssc-posts"
 ...
 
-# Notable Slate Star Codex Blog Posts
-
 I think Slate Star Codex is the best blog on the internet. Below are the posts that changed how I view the world significantly.
 
 For each post I give a one line summary, and inside of the toggle there's an excerpt.

@@ -3,8 +3,6 @@ title: "Blog Archive"
 ...
 
 # Blog Archive
-- [Taking Ideas Seriously](blog/taking-ideas-seriously.html)
-- [Why I Dropped Out After Two Months](blog/dropout.html)
 - [Building and Maintaining Communities](blog/community.html)
 - [Notable Slate Star Codex Blog Posts](blog/notable-ssc-posts.html)
 - [Fundamentals of the Vulkan Graphics API: Why Rendering a Triangle is Complicated](blog/vulkan-fundamentals.html)

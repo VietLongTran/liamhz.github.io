@@ -6,7 +6,6 @@ url: "butterless-butter-chicken"
 img: "img/cooking/butterless-butter-chicken.jpg"
 ...
 
-# Butterless Butter Chicken
 <div class="recipe-image">
 ![](../img/cooking/butterless-butter-chicken.jpg)
 </div>

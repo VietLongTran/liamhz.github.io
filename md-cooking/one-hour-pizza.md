@@ -6,7 +6,6 @@ url: "one-hour-pizza"
 img: "img/cooking/one-hour-pizza.jpg"
 ...
 
-# One Hour Pizza
 <div class="recipe-image">
 ![](../img/cooking/one-hour-pizza.jpg)
 </div>

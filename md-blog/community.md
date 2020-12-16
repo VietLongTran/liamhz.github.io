@@ -5,7 +5,6 @@ date: "2020-11-09"
 url: "community"
 ...
 
-# Building and Maintaining Communities
 ## Articles
 [Principles, Key Research Themes, and Notes for Great Communities][003]
 
