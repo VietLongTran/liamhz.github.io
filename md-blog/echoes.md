@@ -15,9 +15,9 @@ Unlike Toru and Naoko, we were able to have a wonderful relationship together. I
 
 I miss showering with her, cooking with her, and doing small things to make her eyes light up.
 
-I miss the way she held me and made me feel like everything was okay.
-
 I miss the long walks, the days laying in bed together doing nothing, and the late nights talking on Zoom - always feeling like we were on the same wavelength.
+
+I miss the way she held me and made me feel like everything was okay.
 
 Since we broke up, I've had a few opportunities to have casual sex with people, but I passed on all of them. I thought that my experience with this would be like Toru's, that it'd feel empty. I don't like the idea of treating people like an object, a game that I solve for sex.
 
