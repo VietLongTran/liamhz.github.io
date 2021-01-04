@@ -76,8 +76,11 @@ Disconnected: Talking with fake friends.
 
 ### Health & Wellness
 **What activities supported or degraded my health?**
+Eating sugar, a lot. Have cut this back a bit.
+Not exercising. Running everyday now, hoping to start lifting soon.
 
 **When was I at peace, satisfied, or content?**
+I have let go, I am always content. Except for bad moments.
 
 **When did I feel the most alert and energetic?**
 
@@ -138,6 +141,7 @@ Disconnected: Talking with fake friends.
 	
 ### Reflections
 **How do I feel about my life when I look at the areas of life above?**
+I think it's generally good
 
 **Which 2-3 dimensions do I want to focus on in 2021? **
 
@@ -146,21 +150,29 @@ Disconnected: Talking with fake friends.
 **What is my purpose for next year?**
 
 **What 2-3 goals do I want accomplish? What's important about them?**
+I don't know
 
 **Who do I want to become?**
+I don't know
 
 **What personal qualities do I want to strengthen?**
+Intelligence, open mind
 
 **What do I want to learn?**
+Biology, OS, crafting interpreters, business
 
 ### Moving On
 **What do I want or need to shed?**
+I don't know
 
 **What no longer serves me?**
+Being at home
 
 **What do I need to walk away from?**
+I don't no
 
 **What will I say no to?**
+More side project
 
 ### Habits & Behaviors
 **What habits / behaviors do I want to start?**
