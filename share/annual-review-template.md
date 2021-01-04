@@ -1,49 +1,78 @@
 ## Moments & Milestones
 What were your major moments, milestones, and memories?
 
-### January - March
+### January - March: School
 - Moment & Milestone 1
+Rejected from every college I applied to
 - Moment & Milestone 2
+Officially gave up on high school, all grades dropped.
 - Moment & Milestone 3
+Had a lot of fun playing board games with friends
 
-### April - June
+### April - June: CS Rampup
 - Moment & Milestone 1
+Learned React and a lot of CS stuff. Officially fazed out of school. (This started back in Jan)
 - Moment & Milestone 2
+Got into UCSD by sending appeal letters
 - Moment & Milestone 3
+Got 5s on all 6 of my APs, were really proud of this one
 
-### July - September
+### July - September: GENZMAFIA AAAAAAAA
 - Moment & Milestone 1
+GenZMafia, aaaaaaaaaaaa. The craziest trajectory of my life. Got on the NYT. Did a lot of fun side projects with friends. Meet the most people in my entire life.
 - Moment & Milestone 2
+Launched Copysmith and WaitlistAPI. First time crunching. Was really painful. Learned to not take on too many projects at one time.
 - Moment & Milestone 3
+Job interviews. Got a lot of rejections, some offers. Think I could have spent more time in this stage.
+- Moment & Milestone 4
+Progress Study, was really fun. Meet 2 close friends.
+- Moment & Mileston 5
+18 years old, something something when you are young age matters more, but it really mattered to me.
 
-### October - December
+### October - December: Mostly Atmos stuff
 - Moment & Milestone 1
+Start working at Atmos, really fun
 - Moment & Milestone 2
+Become slightly depressed, think this might be because I was chasing something I didn't really want
 - Moment & Milestone 3
+Matrix Fan Club is fun
 
 ## Reflections & Learnings
 ### Success & Growth
 **What am I most proud of personally and professionally?**
+Professionally: Scaling myself to becoming a software engineer. I think the achievement this year will be a tough act to follow. But I am confident.
+Personally: Becoming more independent mind and optimistic about life. I feel very very much happier.
 
-**What new skills and/or habits did I develop?**
+**What new skills and/or habitsx did I develop?**
+Professionally: A lot of software engineering skills.
+Personally: A new framework for thinking about everything. Rationalism? Maybe
 
 **What were the biggest obstacles I overcame?**
+I can't think of any off the top of my head, maybe a problem. Probably the time crunch listed above. Was entirely my fault.
 
 **How am I different?**
+One 
 
 ### Falling Short
 **What goals didn't I accomplish? What got in the way?**
+I didn't go to Stanford, but I got something better than that.
 
 **What do I wish I accomplished?**
+Getting into Stripe
 
 **What habits or interests held me back?**
+My habit of moving too fast with things.
 
 ### People & Relationships
 **Which relationships have been the most fulfilling?**
+Friends in GenZMafia
 
 **Which relationships have been the most draining?**
+A few Internet friends that I quickly cut off
 
 **When did I feel most connected or most alone in relationships?**
+Most connected: Talking with friends
+Disconnected: Talking with fake friends.
 
 ### Health & Wellness
 **What activities supported or degraded my health?**
@@ -69,33 +98,43 @@ What were your major moments, milestones, and memories?
 
 ### Health
 **How does your body and mind feel?**
+7
 
 ### Family & Friends
 **How do you feel about the quality of relationships in your life?**
+9 (-1 because family is not great)
 
 ### Love
 **How do you feel about romance in your life?**
+4
 
 ### Money
 **How do you feel about your financial situation?**
-	
+9	
+
 ### Career
 **How do you feel about work and your career trajectory?**
+8
 
 ### Spirituality
 **Are you connected to something bigger and greater than yourself?**
+6
 
 ### Personal Growth
 **How much time do you invest in self-improvement?**
+5
 
 ### Fun
 **How much time do you devote to recreation and fun?**
+8
 
 ### Technology
 **How does technology play a role in your life?**
+10
 	
 ### Environment
 **How do you feel about your physical environment?**
+6
 	
 ### Reflections
 **How do I feel about my life when I look at the areas of life above?**
@@ -125,10 +164,13 @@ What were your major moments, milestones, and memories?
 
 ### Habits & Behaviors
 **What habits / behaviors do I want to start?**
+Read more, be more productive generally, discipline wrt work
 
 **What habits / behaviors do I want to stop?**
+Twitter mindless scrolling, general undisciplineness
 
 **What habits / behaviors will I continue?**
+Exercise daily
 
 ### Fears & Obstacles
 **How will I step out of my comfort zone?**
